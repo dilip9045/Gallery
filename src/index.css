@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap");
+@import "tailwindcss";
+
+@layer utilities {
+  .shadow-custom {
+    box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.322);
+  }
+
+  .shadow-btn {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .download-btn{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  }
+  
+  .bitcount {
+    font-family: var(--font-bitcount);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+  }
+
+  .bartle {
+    font-family: "BBH Bartle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .loader {
+    width: 45px;
+    aspect-ratio: 1;
+    --c: no-repeat linear-gradient(#000 0 0);
+    background: var(--c) 0 0, var(--c) 0 100%, var(--c) 50% 50%, var(--c) 100% 0,
+      var(--c) 100% 100%;
+    animation: l13 1s infinite alternate;
+  }
+
+  @keyframes l13 {
+    0%,
+    10% {
+      background-size: 20% 100%;
+    }
+    50% {
+      background-size: 20% 20%;
+    }
+    90%,
+    100% {
+      background-size: 100% 20%;
+    }
+  }
+}
